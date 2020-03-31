@@ -9,4 +9,13 @@ int main()
 	int avail[3] = { 3, 3, 2 }; 
 	nt f[p], ans[p], ind = 0; 
 	for (k = 0; k < p; k++)
+        { 
+		f[k] = 0; 
+	} 
+	int need[p][r]; 
+	for (i = 0; i < p; i++) 
+	{ 
+		for (j = 0; j < r; j++) 
+			need[i][j] = max[i][j] - alloc[i][j]; 
+	} 
 
