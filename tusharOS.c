@@ -26,6 +26,30 @@ int main()
 			if (f[i] == 0)
 			 { 
 				int flag = 0; 
-				for (j = 0; j < r; j++) 
+				for (j = 0; j < r; j++){ 
+					if (need[i][j] > avail[j]){ 
+						flag = 1; 
+						break; 
+					} 
+				} 
+
+				if (flag == 0) { 
+					ans[ind++] = i; 
+					for (y = 0; y < r; y++) 
+						avail[y] += alloc[i][y]; 
+					f[i] = 1; 
+				} 
+			} 
+		} 
+	} 
+
+	printf("IT IS IN THE SAFE SEQUENCE\n"); 
+	for (i = 0; i < p - 1; i++) 
+		printf(" P%d ->", ans[i]); 
+	printf(" P%d", ans[p - 1]); 
+
+	return (0); 
+} 
+ 
 
 
