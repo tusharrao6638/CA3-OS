@@ -20,5 +20,12 @@ int main()
 	} 
 	int y = 0; 
 	for (k = 0; k < 5; k++)
+		 { 
+		for (i = 0; i < p; i++) 
+			{ 
+			if (f[i] == 0)
+			 { 
+				int flag = 0; 
+				for (j = 0; j < r; j++) 
 
 
